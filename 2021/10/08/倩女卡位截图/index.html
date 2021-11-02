@@ -287,14 +287,22 @@
                   
                 
                 
-  <div id="lv-container" data-id="city" data-uid="MTAyMC81NDYwMi8zMTA3Mw==">
-    <script type="text/javascript">
-      Fluid.utils.loadComments('#lv-container', function() {
-        Fluid.utils.createScript('https://cdn-city.livere.com/js/embed.dist.js');
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"x2d4W7OPtIFN4ky9vKndK4gu-gzGzoHsz","appKey":"pWu1v6N317ulYhwbdFwL7tuF","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
       });
-    </script>
-    <noscript>Please enable JavaScript to view the comments</noscript>
-  </div>
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
 
 
               </article>
